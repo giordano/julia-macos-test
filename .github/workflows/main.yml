@@ -13,8 +13,8 @@ jobs:
     runs-on: ${{matrix.os}}
     strategy:
       matrix:
-        os: [macos-latest, macos-12]
-        julia-version: ["1", "1.9"]
+        os: [macos-14, macos-13]
+        julia-version: ["1", "1.6"]
       fail-fast: false
     steps:
       - name: Check out github
