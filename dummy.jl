@@ -27,9 +27,8 @@ ret = ccall(Libc.Libdl.dlsym(dummy, "very_long"),
         Cint,
         Cint,
         Cint,
-        Cint, # really bool
-        Cint, # really bool
-        Cint, # really bool
+        Bool, # really bool
+        Bool, # really bool
         Cint,
         Cint,
         Ref{Cdouble},
@@ -53,9 +52,8 @@ ret = ccall(Libc.Libdl.dlsym(dummy, "very_long"),
     1000,
     1000,
     1000,
-    Int32(true),
-    Int32(false),
-    Int32(true),
+    (true),
+    (false),
     0,
     num_threads, # THIS IS THE ONE THAT GETS PRINTED
     out,
