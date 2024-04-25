@@ -10,10 +10,9 @@ int very_long(
     int max_history_size, double init_alpha, double tol_obj,
     double tol_rel_obj, double tol_grad, double tol_rel_grad, double tol_param,
     int num_iterations, int num_elbo_draws, int num_multi_draws,
-    bool calculate_lp, bool psis_resample, int refresh, int num_threads,
+    bool calculate_lp, bool psis_resample, bool try_another, int refresh, int num_threads,
     double *out, size_t out_size, void **err)
 {
-    printf("sizeof(bool):\t%ld\n", sizeof(bool));
     printf("in C:\t\t%d\n", num_threads);
     fflush(stdout);
     return num_threads;
