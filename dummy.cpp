@@ -10,13 +10,6 @@ extern "C" int very_long(
     bool calculate_lp, bool psis_resample, int refresh, int num_threads,
     double *out, size_t out_size, void **err)
 {
-
-    std::cout << num_paths << std::endl;
-    std::cout << num_multi_draws << std::endl;
-    std::cout << calculate_lp << std::endl;
-    std::cout << psis_resample << std::endl;
-    std::cout << refresh << std::endl;
-    std::cout << num_threads << std::endl;
-    std::cout << out_size << std::endl;
-    return 1;
+    std::cout << "num_threads in C++: \t" << num_threads << std::endl;
+    return num_threads;
 }

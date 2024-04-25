@@ -2,8 +2,12 @@ run(`g++ dummy.cpp -shared -fPIC -o dummy.so`)
 
 dummy = Libc.Libdl.dlopen("./dummy.so")
 
+
+num_threads = -1
+println("num_threads in Julia:\t", num_threads)
+
 out = [0.0]
-ccall(Libc.Libdl.dlsym(dummy, "very_long"),
+ret = ccall(Libc.Libdl.dlsym(dummy, "very_long"),
     Cint,
     (
         Ptr{Cvoid},
@@ -56,3 +60,5 @@ ccall(Libc.Libdl.dlsym(dummy, "very_long"),
     length(out),
     C_NULL,
 )
+
+println("ret in Julia:\t\t", ret)
