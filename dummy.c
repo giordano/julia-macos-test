@@ -1,7 +1,10 @@
-// file dummy.cpp
-#include <iostream>
+// file dummy.c
 
-extern "C" int very_long(
+#include <stdio.h>
+#include <stddef.h>
+#include <stdbool.h>
+
+int very_long(
     const void *model, size_t num_paths, const char *inits,
     unsigned int seed, unsigned int id, double init_radius, int num_draws,
     int max_history_size, double init_alpha, double tol_obj,
@@ -10,6 +13,6 @@ extern "C" int very_long(
     bool calculate_lp, bool psis_resample, int refresh, int num_threads,
     double *out, size_t out_size, void **err)
 {
-    std::cout << "num_threads in C++: \t" << num_threads << std::endl;
+    printf("num_threads in C: \t%d\n", num_threads);
     return num_threads;
 }

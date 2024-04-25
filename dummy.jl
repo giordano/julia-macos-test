@@ -1,4 +1,4 @@
-run(`g++ dummy.cpp -shared -fPIC -o dummy.so`)
+run(`gcc dummy.c -shared -fPIC -o dummy.so`)
 
 dummy = Libc.Libdl.dlopen("./dummy.so")
 
