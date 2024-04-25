@@ -55,7 +55,7 @@ ret = ccall(Libc.Libdl.dlsym(dummy, "very_long"),
     Int32(true),
     Int32(false),
     0,
-    Int32(-1), # THIS IS THE ONE THAT GETS PRINTED
+    num_threads, # THIS IS THE ONE THAT GETS PRINTED
     out,
     length(out),
     C_NULL,
