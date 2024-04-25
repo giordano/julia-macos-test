@@ -13,6 +13,7 @@ int very_long(
     bool calculate_lp, bool psis_resample, int refresh, int num_threads,
     double *out, size_t out_size, void **err)
 {
+    printf("sizeof(bool):\t%ld\n", sizeof(bool));
     printf("in C:\t\t%d\n", num_threads);
     fflush(stdout);
     return num_threads;
