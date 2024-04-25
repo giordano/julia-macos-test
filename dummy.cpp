@@ -11,6 +11,12 @@ extern "C" int very_long(
     double *out, size_t out_size, void **err)
 {
 
+    std::cout << num_paths << std::endl;
+    std::cout << num_multi_draws << std::endl;
+    std::cout << calculate_lp << std::endl;
+    std::cout << psis_resample << std::endl;
+    std::cout << refresh << std::endl;
     std::cout << num_threads << std::endl;
+    std::cout << out_size << std::endl;
     return 1;
 }
