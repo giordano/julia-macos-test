@@ -14,6 +14,7 @@ int very_long(
     double *out, size_t out_size, void **err)
 {
     printf("in C:\t\t%d\n", num_threads);
+    printf("sizeof(bool):\t%lu\n", sizeof(bool));
     fflush(stdout);
     return num_threads;
 }
