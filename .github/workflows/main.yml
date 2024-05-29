@@ -3,31 +3,17 @@ name: tinystan tests
 on:
   push:
     branches:
-      - 'main'
+      - '**'
   pull_request:
   workflow_dispatch: {}
 
 jobs:
 
   julia:
-    runs-on: ${{matrix.os}}
-    strategy:
-      matrix:
-        os: [macos-14, macos-13]
-        julia-version: ["1", "1.8"]
-      fail-fast: false
+    runs-on: ubuntu-latest
+    container: mathworks/matlab
     steps:
-      - name: Check out github
-        uses: actions/checkout@v4
-        with:
-          submodules: recursive
-
-      - name: Set up Julia
-        uses: julia-actions/setup-julia@v2
-        with:
-          version: ${{ matrix.julia-version }}
-
       - name: Run
         run: |
-          julia dummy.jl
+          echo "Hello world"
 
