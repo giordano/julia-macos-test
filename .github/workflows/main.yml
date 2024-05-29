@@ -1,4 +1,4 @@
-name: tinystan tests
+name: Matlab Docker image
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
 
 jobs:
 
-  julia:
+  test:
     runs-on: ubuntu-latest
     container: mathworks/matlab
     steps:
