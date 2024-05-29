@@ -11,7 +11,7 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
-    container: mathworks/matlab
+    container: mosegiordano/julia-ipu-demo:latest
     steps:
       - name: Run
         run: |
