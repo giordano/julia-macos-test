@@ -1,11 +1,11 @@
 name: Matlab Docker image
 
 on:
-  push:
-    branches:
-      - '**'
+  # push:
+  #   branches:
+  #     - '**'
   pull_request:
-  workflow_dispatch: {}
+  # workflow_dispatch: {}
 
 jobs:
 
