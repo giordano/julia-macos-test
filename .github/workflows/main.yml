@@ -1,9 +1,9 @@
 name: Matlab Docker image
 
 on:
-  # push:
-  #   branches:
-  #     - '**'
+  push:
+    branches:
+      - '**'
   pull_request:
   # workflow_dispatch: {}
 
@@ -11,7 +11,7 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
-    container: mosegiordano/julia-ipu-demo:latest
+    container: ghcr.io/giordano/julia-macos-test:mg-matlab
     steps:
       - name: Run
         run: |
